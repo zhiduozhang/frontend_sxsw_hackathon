@@ -9,3 +9,8 @@ test("renders hello world message", () => {
   const linkElement = screen.getByText(/Hello from backend!/i);
   expect(linkElement).toBeInTheDocument();
 });
+test("updates message state with response data", () => {
+  render(<App />);
+  const messageElement = screen.getByText(/Hello from backend!/);
+  expect(messageElement).toBeInTheDocument();
+});
