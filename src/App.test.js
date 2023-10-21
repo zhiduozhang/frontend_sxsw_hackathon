@@ -6,6 +6,6 @@ fetchMock.mockResponse(JSON.stringify({ message: 'Hello World!' }));
 
 test('renders hello world message', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Hello from backend!/);
+  const linkElement = screen.getByText(/Hello from backend!/i);
   expect(linkElement).toBeInTheDocument();
 });
